@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GürcüManga - Premium Manhwa Reader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Bangers&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            purple: '#7B3FE4',
+                            black: '#0F0F14',
+                            darkGray: '#1A1A22',
+                            pink: '#FF2E88',
+                            gold: '#FFD700'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        anime: ['Bangers', 'cursive']
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'shimmer': 'shimmer 2s infinite linear'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        shimmer: {
+                            '0%': { transform: 'translateX(-100%)' },
+                            '100%': { transform: 'translateX(100%)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0F0F14;
+            color: #ffffff;
+            scrollbar-width: thin;
+            scrollbar-color: #7B3FE4 #0F0F14;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0F0F14;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #7B3FE4;
+            border-radius: 10px;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #7B3FE4, #FF2E88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .speed-lines {
+            background-image: repeating-linear-gradient(45deg, rgba(123, 63, 228, 0.05) 0px, rgba(123, 63, 228, 0.05) 1px, transparent 1px, transparent 10px);
+        }
+        .fill-mode-both {
+            animation-fill-mode: both;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
